@@ -72,7 +72,9 @@ namespace Wox.Plugin.BrowserBookmark
 
         private void LoadChromeBookmarks()
         {
+            String myChromeProfilePath = @"D:\Program Files\Chrome\Profile";
             String platformPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            LoadChromeBookmarks(myChromeProfilePath, "Green Chrome");
             LoadChromeBookmarks(Path.Combine(platformPath, @"Google\Chrome\User Data"), "Google Chrome");
             LoadChromeBookmarks(Path.Combine(platformPath, @"Google\Chrome SxS\User Data"), "Google Chrome Canary");
             LoadChromeBookmarks(Path.Combine(platformPath, @"Chromium\User Data"), "Chromium");
